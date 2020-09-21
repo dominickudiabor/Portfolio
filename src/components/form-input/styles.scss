@@ -1,0 +1,30 @@
+@import "../../sass/main";
+.input {
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    input {
+        @include input-box();
+        &:focus {
+          outline: none;
+        }
+    
+        &:focus ~ .input__label {
+          @include shrinkLabel();
+        }
+      }
+
+      label {
+        color: #5d9ea8;
+        font-size: 1.3rem;
+        position: absolute;
+        pointer-events: none;
+        left: 0.5em;
+        top: 0.5em;
+        transition: 300ms ease all;
+    
+        @include web-content();
+      }
+  }
+  
+  

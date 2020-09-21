@@ -1,0 +1,36 @@
+@import "../../sass/main";
+
+.contact-form {
+  background-color: $primary-color;
+  @include section-padding();
+
+  .contact-form__header {
+    @include section-sub-header($secondary-color);
+  }
+  .contact-form__line {
+    @include hr-line($secondary-color);
+  }
+  .contact-form__container {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin: 3% 0 0 35%;
+  
+  }
+
+  button {
+    width: 40%;
+    padding: 1rem 0;
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    margin-bottom: 6%;
+    @media screen and(max-width: 900px) {
+      width: 30%;
+      padding: 2% 0;
+      font-size: 0.4rem;
+      border-radius: 5px;
+    }
+  }
+}

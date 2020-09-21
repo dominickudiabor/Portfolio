@@ -1,0 +1,23 @@
+@import "../../sass/main";
+
+.tech-stack {
+  background-color: $primary-color;
+  @include section-padding();
+  .tech-stack__header {
+    @include section-sub-header($secondary-color);
+  }
+  .tech-stack__line {
+    @include hr-line($secondary-color);
+  }
+  .tech-stack__img-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 4% 0 4% -5%;
+    .tech-stack__images {
+      background-color: $primary-color;
+      width: 15vw;
+      object-fit: contain;
+      height: 15vh;
+    }
+  }
+}

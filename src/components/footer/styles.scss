@@ -1,0 +1,39 @@
+@import '../../sass/main';
+
+
+.footer{
+    background-color: $secondary-color;
+    @include section-padding();
+    display: flex;
+    justify-content: space-between;
+    color: $primary-color;
+    padding-top: 4%;
+  
+    .footer__links {
+      @include navigation-items();
+      color: $primary-color;
+      @include footer-text();
+    }
+  
+    .footer__text {
+      margin-top: 5%;
+      margin-left: -5%;
+      font-size: 0.7rem;
+      @include footer-text();
+    }
+    .footer__icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      font-size: 1.5rem;
+      @include footer-text();
+      @media screen and(max-width: 900px) {
+        gap: 10px;
+        align-self: center;
+        padding-top: 0.4rem;
+      }
+    }
+    .fab {
+      color: $primary-color;
+    }
+  }

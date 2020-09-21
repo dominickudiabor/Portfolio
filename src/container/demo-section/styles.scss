@@ -1,0 +1,25 @@
+@import "../../sass/main";
+
+.demos {
+  background-color: $secondary-color;
+  @include section-padding();
+
+  .demos__header {
+    @include section-sub-header($primary-color);
+  }
+  .demos__line {
+    @include hr-line($primary-color);
+  }
+
+  .demos__elements {
+    display: flex;
+    justify-content: space-between;
+    margin: 7% 0;
+    padding: 0 10%;
+    @media screen and(max-width: 900px) {
+ 
+    }
+
+
+  }
+}

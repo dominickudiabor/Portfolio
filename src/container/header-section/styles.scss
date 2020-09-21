@@ -1,0 +1,47 @@
+@import '../../sass/main';
+
+.header {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include section-padding();
+
+  .header__logo {
+    font-size: 2rem;
+    font-style: italic;
+    .header__name {
+      margin: 0 1rem;
+    }
+  }
+
+  .header__icons {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-size: 20px;
+    @media screen and(max-width: 900px) {
+      display: none;
+    }
+
+    .header__dropdown {
+      display: none;
+      @media screen and(max-width: 900px) {
+        display: contents;
+      }
+    }
+
+    .header__links {
+      margin-left: 1em;
+      text-decoration: none !important;
+      &:hover {
+        transition: 400ms ease all;
+        border-bottom: solid 5px $secondary-color;
+      }
+      @media screen and(max-width: 900px) {
+        margin-bottom: 1.2em;
+      }
+    }
+  }
+}
