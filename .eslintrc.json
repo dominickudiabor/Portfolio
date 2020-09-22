@@ -1,12 +1,27 @@
 {
-  "extends": ["universe/native"],
-  "plugins": ["jsx-a11y", "react", "react-native"],
+  "plugins": ["react"],
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "no-unused-vars": ["error"],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-unused-vars": ["error"],
     "sort-imports": "off",
-    "import/order": "off"
+    "import/order": "off",
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-inferrable-types": [
+      "warn",
+      {
+        "ignoreParameters": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }
