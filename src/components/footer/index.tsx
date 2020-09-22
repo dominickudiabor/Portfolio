@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Nav from '../nav'
+import NavLink from '../navLink'
 import { footerNavigation, footerIcons } from '../../data/footer.data'
 
 import './styles.scss'
@@ -10,12 +10,12 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__navigation">
-        {footerNavigation.map((nav, idx) => {
-          const { classname, reference, children } = nav
+        {footerNavigation.map((item, idx) => {
+          const { classname, reference, children } = item
           return (
-            <Nav key={idx} classname={classname} reference={reference} aria="footer navigation">
+            <NavLink key={idx} className={classname} reference={reference} aria="footer navigation">
               {children}
-            </Nav>
+            </NavLink>
           )
         })}
       </div>
@@ -26,9 +26,9 @@ const Footer = () => {
         {footerIcons.map((icon, idx) => {
           const { reference, aria, children } = icon
           return (
-            <Nav key={idx} reference={reference} aria={aria}>
+            <NavLink key={idx} reference={reference} aria={aria}>
               {children}
-            </Nav>
+            </NavLink>
           )
         })}
       </div>

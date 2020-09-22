@@ -3,13 +3,16 @@
 .header {
   background-color: $primary-color;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 90%;
+  z-index: 1000;
+  align-items: center;
 
   @include section-padding();
 
   .header__logo {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-style: italic;
     .header__name {
       margin: 0 1rem;
@@ -33,12 +36,11 @@
     }
 
     .header__links {
-      margin-left: 1em;
       text-decoration: none !important;
-      &:hover {
-        transition: 400ms ease all;
-        border-bottom: solid 5px $secondary-color;
-      }
+      padding: 0.9rem 1.2rem;
+
+      @include hover-transition();
+
       @media screen and(max-width: 900px) {
         margin-bottom: 1.2em;
       }

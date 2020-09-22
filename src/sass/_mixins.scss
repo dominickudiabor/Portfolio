@@ -1,157 +1,160 @@
 @mixin section-sub-header($property) {
-    font-size: 2.7rem;
-    font-weight: bolder;
-    color: $property;
-    text-align: center;
-    @media screen and(max-width: 900px) {
-      font-size: 1rem;
-      width: 100%;
-    }
-  }
- 
-
-
-  @mixin hr-line($property) {
-    width: 5%;
-    border: solid 2px $property;
-    @media screen and(max-width: 900px) {
-      border: solid 0.5px $property;
-    }
-  }
-  
-  @mixin section-padding {
-    padding: 3% 7%;
-    height: auto;
-  }
-  
-  @mixin navigation-items {
-    text-decoration: none !important;
-    margin-right: 1.2em;
+  font-size: 2.7rem;
+  font-weight: bolder;
+  color: $property;
+  text-align: center;
+  @media screen and(max-width: 900px) {
     font-size: 1rem;
-  
-  }
-  
-  @mixin  footer-text {
-
-    @media screen and(max-width: 900px) {
-      font-size: 0.2rem;
-    }
-  }
-  
-  @mixin input-box() {
     width: 100%;
-    height: 3.2em;
-    font-size: 1.2rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: solid 1px $secondary-color;
-    margin: 0.9rem 0;
-    @media screen and(max-width: 900px) {
-      height: 1rem;
-    }
   }
+}
 
-  @mixin shrinkLabel {
-    top: -0.2rem;
+@mixin hr-line($property) {
+  width: 5%;
+  border: solid 2px $property;
+  @media screen and(max-width: 900px) {
+    border: solid 0.5px $property;
+  }
+}
+
+@mixin section-padding {
+  padding: 3% 7%;
+  height: auto;
+}
+
+@mixin hover-transition {
+  &:hover {
+    transition: 400ms ease all;
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-style: italic;
+    border-radius: 0.2rem;
+  }
+}
+
+@mixin navigation-items {
+  text-decoration: none !important;
+  margin-right: 1.2em;
+  font-size: 1rem;
+}
+
+@mixin footer-text {
+  @media screen and(max-width: 900px) {
+    font-size: 0.2rem;
+  }
+}
+
+@mixin input-box() {
+  width: 100%;
+  height: 3.2em;
+  font-size: 1.2rem;
+  border-radius: 0;
+  border: none;
+  border-bottom: solid 1px $secondary-color;
+  margin: 0.9rem 0;
+  @media screen and(max-width: 900px) {
+    height: 1rem;
+  }
+}
+
+@mixin shrinkLabel {
+  top: -0.2rem;
+  font-size: 1rem;
+  color: $secondary-color;
+  @media screen and(max-width: 900px) {
+    font-size: 0.5rem;
+  }
+}
+
+@mixin title-responsive {
+  @media screen and(max-width: 900px) {
+    margin-top: -15%;
+    font-size: 3rem;
+    width: 100%;
+  }
+}
+
+@mixin content-responsive {
+  @media screen and(max-width: 900px) {
     font-size: 1rem;
-    color: $secondary-color;
-    @media screen and(max-width: 900px) {
-   font-size: 0.5rem ;
-    }
-  }
-
-  
-  @mixin title-responsive {
-    @media screen and(max-width: 900px) {
-      margin-top: -15%;
-      font-size: 3rem;
-      width: 100%;
-    }
-  }
-  
-  @mixin content-responsive {
-    @media screen and(max-width: 900px) {
-      font-size: 1rem;
-      width: 100%;
-    }
-  }
-  
-  @mixin web-content {
-    @media screen and(max-width: 900px) {
-      font-size: 0.7rem;
-    }
-  }
-
-  
-  
-  @mixin blog-divider {
     width: 100%;
-    border: solid 1px $primary-color;
-    margin-bottom: 5%;
+  }
+}
+
+@mixin web-content {
+  @media screen and(max-width: 900px) {
+    font-size: 0.7rem;
+  }
+}
+
+@mixin blog-divider {
+  width: 100%;
+  border: solid 1px $primary-color;
+  margin-bottom: 5%;
+}
+
+@mixin arrow-animate {
+  width: 1.8em;
+  height: 2.5em;
+  position: relative;
+  left: 50%;
+  margin-left: -0.5em;
+  top: 7.5rem;
+  @media screen and(max-width: 900px) {
+    margin-left: -1.5em;
+    top: 5.5rem;
   }
 
-  @mixin  arrow-animate {
-    width: 1.8em;
-    height: 2.5em;
-    position: relative;
-    left: 50%;
-    margin-left: -0.5em;
-    top: 7.5rem;
-    @media screen and(max-width: 900px) {
-      margin-left: -1.5em;
-      top: 5.5rem;
+  @keyframes arrow {
+    0% {
+      opacity: 0;
     }
-
-    @keyframes arrow {
-      0% {
-        opacity: 0;
-      }
-      40% {
-        opacity: 1;
-      }
-      80% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 0;
-      }
+    40% {
+      opacity: 1;
     }
-
-    @-webkit-keyframes arrow /*Safari and Chrome*/ {
-      0% {
-        opacity: 0;
-      }
-      40% {
-        opacity: 1;
-      }
-      80% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 0;
-      }
+    80% {
+      opacity: 0;
     }
-
-    path {
-      stroke: #2994d1;
-      fill: transparent;
-      stroke-width: 1px;
-      animation: arrow 2s infinite;
-      -webkit-animation: arrow 2s infinite;
-
-      &.a1 {
-        animation-delay: -1s;
-        -webkit-animation-delay: -1s; /* Safari 和 Chrome */
-      }
-
-      &.a2 {
-        animation-delay: -0.5s;
-        -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
-      }
-
-      &.a3 {
-        animation-delay: 0s;
-        -webkit-animation-delay: 0s; /* Safari 和 Chrome */
-      }
+    100% {
+      opacity: 0;
     }
   }
+
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  path {
+    stroke: #2994d1;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+
+    &.a1 {
+      animation-delay: -1s;
+      -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+    }
+
+    &.a2 {
+      animation-delay: -0.5s;
+      -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+    }
+
+    &.a3 {
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+    }
+  }
+}

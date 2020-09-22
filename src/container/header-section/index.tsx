@@ -1,27 +1,22 @@
 import React from 'react'
-
-import headerLinks from '../../data/header.data'
-import Nav from '../../components/nav'
+import { header } from '../../portfolio'
+import NavLink from '../../components/navLink'
 
 import './styles.scss'
 
 const Header = () => (
   <div className="header" id="header">
     <a href="/" className="header__logo">
-      <span className="header__sym"> &lt;</span>
-      <span className="header__name">Dominic</span>
-      <span className="header__sym">/&gt;</span>
+      {header.navigation.map((NavLink) => NavLink)}
     </a>
 
-    <div className="header__dropdown"></div>
-
     <div className="header__icons">
-      {headerLinks.map((link, idx) => {
-        const { classname, reference, children } = link
+      {header.headerLinks.map((item) => {
+        const { classname, reference, link, id } = item
         return (
-          <Nav key={idx} classname={classname} reference={reference} aria={'header icons'}>
-            {children}
-          </Nav>
+          <NavLink key={id} className={classname} reference={reference} aria={link}>
+            {link}
+          </NavLink>
         )
       })}
     </div>
