@@ -25,8 +25,8 @@
 @mixin hover-transition {
   &:hover {
     transition: 400ms ease all;
-    background-color: $secondary-color;
-    color: $primary-color;
+    background-color: $primary-color;
+    color: $secondary-color;
     font-style: italic;
     border-radius: 0.2rem;
   }
@@ -94,8 +94,8 @@
 }
 
 @mixin arrow-animate {
-  width: 1.8em;
-  height: 2.5em;
+  width: 3em;
+  height: 3em;
   position: relative;
   left: 50%;
   margin-left: -0.5em;
@@ -136,9 +136,9 @@
   }
 
   path {
-    stroke: #2994d1;
+    stroke: $primary-color;
     fill: transparent;
-    stroke-width: 1px;
+    stroke-width: 1.5px;
     animation: arrow 2s infinite;
     -webkit-animation: arrow 2s infinite;
 

@@ -1,20 +1,19 @@
 @import '../../sass/main';
 
 .header {
-  background-color: $primary-color;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 90%;
-  z-index: 1000;
   align-items: center;
 
   @include section-padding();
 
   .header__logo {
-    font-size: 1.7rem;
-    font-style: italic;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: -2.5rem;
     .header__name {
+      font-family: 'Agustina Regular';
       margin: 0 1rem;
     }
   }
@@ -28,13 +27,6 @@
       display: none;
     }
 
-    .header__dropdown {
-      display: none;
-      @media screen and(max-width: 900px) {
-        display: contents;
-      }
-    }
-
     .header__links {
       text-decoration: none !important;
       padding: 0.9rem 1.2rem;
@@ -44,6 +36,13 @@
       @media screen and(max-width: 900px) {
         margin-bottom: 1.2em;
       }
+    }
+  }
+  .header__menu {
+    padding-right: 2rem;
+    display: none;
+    @media screen and(max-width: 900px) {
+      display: contents;
     }
   }
 }

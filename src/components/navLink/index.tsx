@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface NavProps {
   className?: string;
@@ -10,6 +10,6 @@ const NavLink = ({ className, reference, aria, children }: NavProps) => (
   <a className={className} href={reference} aria-label={aria}>
     {children}
   </a>
-)
+);
 
-export default NavLink
+export default NavLink;

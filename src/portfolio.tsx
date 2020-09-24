@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 //header section
 export const header = {
@@ -8,7 +8,7 @@ export const header = {
       &lt;
     </span>,
     <span key={2} className="header__name">
-      Dominic
+      Dominic Kudiabor
     </span>,
     <span key={3} className="header__sym">
       /&gt;
@@ -34,4 +34,5 @@ export const header = {
       link: 'Contact',
     },
   ],
-}
+  menuLinks: ['About', 'Projects', 'Tech-Stack', 'Contact'],
+};

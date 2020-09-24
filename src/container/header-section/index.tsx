@@ -1,26 +1,46 @@
-import React from 'react'
-import { header } from '../../portfolio'
-import NavLink from '../../components/navLink'
+import React, { useState } from 'react';
+import { header } from '../../portfolio';
+import NavLink from '../../components/navLink';
+import HamburgerMenu from 'react-hamburger-menu';
+import './styles.scss';
 
-import './styles.scss'
+const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
 
-const Header = () => (
-  <div className="header" id="header">
-    <a href="/" className="header__logo">
-      {header.navigation.map((NavLink) => NavLink)}
-    </a>
+  const handleMenuClick = () => setOpenMenu(!openMenu);
+  /*   const handleLinkClick = () => setOpenMenu(false); */
 
-    <div className="header__icons">
-      {header.headerLinks.map((item) => {
-        const { classname, reference, link, id } = item
-        return (
-          <NavLink key={id} className={classname} reference={reference} aria={link}>
-            {link}
-          </NavLink>
-        )
-      })}
+  return (
+    <div className="header" id="header">
+      <a href="/" className="header__logo">
+        {header.navigation.map((NavLink) => NavLink)}
+      </a>
+
+      <div className="header__icons">
+        {header.headerLinks.map((item) => {
+          const { classname, reference, link, id } = item;
+          return (
+            <NavLink key={id} className={classname} reference={reference} aria={link}>
+              {link}
+            </NavLink>
+          );
+        })}
+      </div>
+      <div className="header__menu">
+        <HamburgerMenu
+          isOpen={openMenu}
+          menuClicked={handleMenuClick}
+          width={20}
+          height={17}
+          strokeWidth={2}
+          rotate={0}
+          color="#008095"
+          borderRadius={0}
+          animationDuration={0.5}
+        />
+      </div>
     </div>
-  </div>
-)
+  );
+};
 
-export default Header
+export default Header;
