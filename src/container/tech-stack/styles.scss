@@ -1,0 +1,20 @@
+@import '../../sass/main';
+
+.tech-stack {
+  @include section-padding();
+  @include section-background();
+
+  .tech-stack__header {
+    @include section-sub-header($primary-color);
+  }
+  .tech-stack__line {
+    @include hr-line($primary-color);
+  }
+  .tech-stack__img-container {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

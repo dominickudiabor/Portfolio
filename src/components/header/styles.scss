@@ -5,9 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include section-padding();
-
+  padding: 0.5% 5%;
   .header__logo {
     font-size: 2rem;
     margin-top: 1rem;

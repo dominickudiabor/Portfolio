@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 interface SectionContainerProps {
-  id: string
-  classname1: string
-  classname2: string
-  classname3: string
-  header: string
-  children: React.ReactNode
+  id: string;
+  classname1: string;
+  classname2: string;
+  classname3: string;
+  header: string;
+  children: React.ReactNode;
 }
 const SectionContainer = ({ id, classname1, classname2, classname3, header, children }: SectionContainerProps) => (
-  <section id={id} className={classname1}>
-    <h2 className={classname2}>{header}</h2>
+  <div id={id} className={classname1}>
+    <p className={classname2}>{header}</p>
     <hr className={classname3} />
     {children}
-  </section>
-)
+  </div>
+);
 
-export default SectionContainer
+export default SectionContainer;

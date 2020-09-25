@@ -1,0 +1,21 @@
+@import '../../sass/main';
+
+.about {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 5%;
+  .about__imgContent {
+    background-color: transparent;
+    padding: 1rem;
+
+    :hover {
+      cursor: pointer;
+    }
+    .about__image {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}

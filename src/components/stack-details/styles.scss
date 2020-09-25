@@ -1,0 +1,40 @@
+@import '../../sass/main';
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 40%;
+  align-items: center;
+  align-content: center;
+  padding: 1% 5%;
+  justify-content: space-between;
+  color: $primary-color;
+  width: 100%;
+
+  .details__img {
+    width: 20%;
+    background-color: $primary-color;
+    padding: 0.4rem;
+    border-radius: 5%;
+    margin-top: 2.5rem;
+
+    .details__image {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  .details__content {
+    width: 60%;
+    flex-direction: column;
+    padding: 0.4rem;
+    .details__title {
+      font-size: 2rem;
+      border-bottom: 1px solid $primary-color;
+      width: fit-content;
+      margin-bottom: 0.5rem;
+    }
+    .details__hash {
+      font-size: 1.2rem;
+    }
+  }
+}

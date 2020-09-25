@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { header } from '../../portfolio';
-import NavLink from '../../components/navLink';
+import NavLink from '../navLink';
 import HamburgerMenu from 'react-hamburger-menu';
 import './styles.scss';
 
@@ -18,9 +18,9 @@ const Header = () => {
 
       <div className="header__icons">
         {header.headerLinks.map((item) => {
-          const { classname, reference, link, id } = item;
+          const { classname, link, id, route } = item;
           return (
-            <NavLink key={id} className={classname} reference={reference} aria={link}>
+            <NavLink key={id} className={classname} route={route} aria={link}>
               {link}
             </NavLink>
           );
