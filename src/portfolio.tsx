@@ -17,20 +17,26 @@ export const header = {
     {
       id: 1,
       classname: 'header__links',
+      route: 'about',
+      link: 'About',
+    },
+    {
+      id: 1,
+      classname: 'header__links',
       route: 'projects',
       link: 'Projects',
     },
     {
-      id: 2,
+      id: 3,
       classname: 'header__links',
       route: 'tech-stack',
       link: 'Tech-Stack',
     },
     {
-      id: 3,
+      id: 4,
       classname: 'header__links',
-      route: 'about',
-      link: 'About',
+      route: 'contact',
+      link: 'Contact',
     },
   ],
 };
@@ -85,7 +91,7 @@ export const techStack = {
 export const about = {
   sectionProps: {
     id: 'about-section',
-    header: 'About Me!',
+    header: 'About Me',
   },
   avatar: require('./assets/images/dominic.jpg'),
   alt: 'Avatar of my profile photo',
@@ -97,5 +103,19 @@ export const projects = {
   sectionProps: {
     id: 'projects-section',
     header: 'Projects',
+  },
+};
+
+export const contact = {
+  sectionProps: {
+    id: 'contact-section',
+    header: 'Contact Me!',
+  },
+  links: {
+    Github: 'https://github.com/dominickudiabor',
+    Linkedin: 'https://www.linkedin.com/in/dominickudiabor/',
+    Gmail: 'dominickudd@gmail.com',
+    Medium: 'https://medium.com/@dominickud',
+    CellPhone: '046 9496179',
   },
 };
