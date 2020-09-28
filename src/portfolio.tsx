@@ -32,12 +32,6 @@ export const header = {
       route: 'about',
       link: 'About',
     },
-    {
-      id: 4,
-      classname: 'header__links',
-      route: 'contact',
-      link: 'Contact',
-    },
   ],
 };
 
@@ -50,6 +44,18 @@ export const home = {
     },
     { url: 'https://i.ibb.co/C0F3GyG/git.png', name: 'github', website: 'https://github.com/dominickudiabor' },
   ],
+  socialMedia: [
+    { label: 'Github', link: 'https://github.com/dominickudiabor', invert: true },
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/dominickudiabor/', invert: false },
+    {
+      label: 'Resume',
+      link:
+        'https://assets.ctfassets.net/449mcwf87tn4/4gvnuep6RWXFta1X7Nomgn/f03bbdebcc578f06ce89fdd355429552/Dominic_Travis_Kudiabor__-_Integrify_CV_-_25.09.2020.pdf',
+      invert: true,
+    },
+  ],
+
+  description: ['Dominic Travis Kudiabor', 'A Full-Stack / Software Developer'],
 };
 
 export const techStack = {
@@ -71,10 +77,25 @@ export const techStack = {
     { image: require('./assets/icons/jest.png'), title: 'Testing', hashtags: ['Jest', 'Instabul'] },
   ],
   sectionProps: {
-    id: 'demos-section',
-    classname1: 'tech-stack',
-    classname2: 'tech-stack__header',
-    classname3: 'tech-stack__line',
+    id: 'techStack-section',
     header: 'Tech-Stack',
+  },
+};
+
+export const about = {
+  sectionProps: {
+    id: 'about-section',
+    header: 'About Me!',
+  },
+  avatar: require('./assets/images/dominic.jpg'),
+  alt: 'Avatar of my profile photo',
+  description:
+    'Focused driven professional, having excellent technical and analytical skills. Offering 2 years of experience in the Full Stack eco-system. Proficient at state management, feature development and implementation.  ',
+};
+
+export const projects = {
+  sectionProps: {
+    id: 'projects-section',
+    header: 'Projects',
   },
 };

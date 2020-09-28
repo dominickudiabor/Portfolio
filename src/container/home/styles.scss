@@ -1,21 +1,24 @@
 @import '../../sass/main';
 
 .about {
-  display: flex;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding-right: 5%;
-  .about__imgContent {
-    background-color: transparent;
-    padding: 1rem;
+  @include section-padding();
+  @include section-background();
 
-    :hover {
-      cursor: pointer;
+  .about__intro {
+    @include container-contents();
+    :first-child {
+      font-size: 4rem;
     }
-    .about__image {
-      width: 2.5rem;
-      height: 2.5rem;
+    :last-child {
+      font-size: 2rem;
     }
+  }
+  .about__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 40vw;
+    padding: 5%;
   }
 }

@@ -17,7 +17,7 @@ const StackDetails = ({ image, title, hashTags }: StackDetailsProps) => (
       <div className="details__content">
         <p className="details__title">{title}</p>
         {hashTags.map((tag, idx) => (
-          <span className="details__hash" key={tag}>{`${idx ? ', ' : ''}${tag}`}</span>
+          <span className="details__hash" key={tag}>{`${idx ? ' | ' : ''}${tag}`}</span>
         ))}
       </div>
     </div>

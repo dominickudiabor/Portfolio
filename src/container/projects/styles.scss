@@ -1,13 +1,13 @@
-@import "../../sass/main";
+@import '../../sass/main';
 
 .projects {
   background-color: $secondary-color;
   @include section-padding();
   .projects__header {
-    @include section-sub-header($primary-color);
+    @include section-sub-header();
   }
   .projects__line {
-    @include hr-line($primary-color);
+    @include hr-line();
   }
   .projects__container {
     display: flex;

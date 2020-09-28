@@ -9,9 +9,9 @@
   margin-top: 2.7rem;
 }
 
-@mixin section-sub-header($property) {
+@mixin section-sub-header {
   font-size: 2.2rem;
-  color: $property;
+  color: $primary-color;
   text-align: center;
   @media screen and(max-width: 900px) {
     font-size: 1rem;
@@ -19,13 +19,19 @@
   }
 }
 
-@mixin hr-line($property) {
+@mixin hr-line {
   width: 5%;
   margin-top: -1.5rem;
-  border: solid 1px $property;
+  border: solid 1px $primary-color;
   @media screen and(max-width: 900px) {
-    border: solid 0.5px $property;
+    border: solid 0.5px $primary-color;
   }
+}
+
+@mixin container-contents {
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
 @mixin hover-transition {
@@ -115,4 +121,5 @@
     #0a0558,
     #080450
   );
+  opacity: 1;
 }
