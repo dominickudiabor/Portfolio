@@ -94,7 +94,7 @@ export const about = {
   avatar: require('./assets/images/dominic.jpg'),
   alt: 'Avatar of my profile photo',
   description:
-    'Focused driven professional, having excellent technical and analytical skills. Offering 2 years of experience in the Full Stack eco-system. Proficient at state management, feature development and implementation.  ',
+    'Focused driven professional, having excellent technical and analytical skills. Offering 3 years of experience in the Full Stack eco-system. Proficient at state management, feature development and implementation.  ',
 };
 
 export const projects = {
