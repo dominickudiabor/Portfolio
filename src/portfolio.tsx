@@ -137,7 +137,7 @@ export const projects = {
       imageUrl: require('./assets/images/countries.png'),
       stack: 'React , Typescript, Context API, Redux ',
       gitLink: 'https://github.com/dominickudiabor/country-web-app',
-      viewLink: '',
+      viewLink: 'https://countries-web-app.netlify.app/',
     },
   ],
 };
