@@ -6,7 +6,9 @@ export const header = {
     <span key={1} className="header__sym">
       &lt;
     </span>,
-    <span key={2} className="header__name"></span>,
+    <span key={2} className="header__name">
+      Dominic Kudiabor
+    </span>,
     <span key={3} className="header__sym">
       /&gt;
     </span>,
