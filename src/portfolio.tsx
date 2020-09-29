@@ -6,9 +6,7 @@ export const header = {
     <span key={1} className="header__sym">
       &lt;
     </span>,
-    <span key={2} className="header__name">
-      Dominic Kudiabor
-    </span>,
+    <span key={2} className="header__name"></span>,
     <span key={3} className="header__sym">
       /&gt;
     </span>,
@@ -21,7 +19,7 @@ export const header = {
       link: 'About',
     },
     {
-      id: 1,
+      id: 2,
       classname: 'header__links',
       route: 'projects',
       link: 'Projects',
@@ -104,6 +102,44 @@ export const projects = {
     id: 'projects-section',
     header: 'Projects',
   },
+
+  cards: [
+    {
+      name: 'Valpas Recruitment App',
+      imageUrl: require('./assets/images/native.png'),
+      stack: 'React Native, TypeScript, Redux, AWS, Amplify, Expo CLI, AWS CLI',
+      gitLink: '',
+      viewLink: '',
+    },
+    {
+      name: 'Clothing Store Frontend',
+      imageUrl: require('./assets/images/frontend.png'),
+      stack: 'React.js, TypeScript, Redux, SASS, Context-API',
+      gitLink: 'https://github.com/dominickudiabor/clothing-store-frontend',
+      viewLink: '',
+    },
+    {
+      name: 'Clothing Store Backend',
+      imageUrl: require('./assets/images/backend.png'),
+      stack: 'Express.js, Node.js, MongoDB, REST API , JWT, Passport',
+      gitLink: 'https://github.com/dominickudiabor/clothing-store-backend',
+      viewLink: '',
+    },
+    {
+      name: 'Portfolio',
+      imageUrl: require('./assets/images/portfolio.png'),
+      stack: 'React , Typescript, React Router, Sass, ',
+      gitLink: 'https://github.com/dominickudiabor/portfolio',
+      viewLink: 'https://dominickudiabor.netlify.app/',
+    },
+    {
+      name: 'Country Web App',
+      imageUrl: require('./assets/images/countries.png'),
+      stack: 'React , Typescript, Context API, Redux ',
+      gitLink: 'https://github.com/dominickudiabor/country-web-app',
+      viewLink: '',
+    },
+  ],
 };
 
 export const contact = {

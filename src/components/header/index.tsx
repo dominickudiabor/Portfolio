@@ -20,7 +20,7 @@ const Header = () => {
         {header.headerLinks.map((item) => {
           const { classname, link, id, route } = item;
           return (
-            <NavLink key={id} className={classname} route={route} aria={link}>
+            <NavLink key={`naviagtionlink-${id}`} className={classname} route={route} aria={link}>
               {link}
             </NavLink>
           );

@@ -1,16 +1,8 @@
 @import '../../sass/main';
 
-.projects {
-  background-color: $secondary-color;
-  @include section-padding();
-  .projects__header {
-    @include section-sub-header();
-  }
-  .projects__line {
-    @include hr-line();
-  }
-  .projects__container {
-    display: flex;
-    flex-direction: column;
-  }
+.projects__container {
+  @include container-contents();
+  display: flex;
+  width: 90%;
+  overflow: scroll;
 }
