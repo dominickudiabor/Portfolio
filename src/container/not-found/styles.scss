@@ -1,0 +1,13 @@
+@import '../../sass/main';
+
+.notFound {
+  @include section-padding();
+  @include section-background();
+
+  .notFound__info {
+    @include container-contents();
+    :first-child {
+      font-size: 4rem;
+    }
+  }
+}

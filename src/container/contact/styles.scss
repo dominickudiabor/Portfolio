@@ -1,0 +1,29 @@
+@import '../../sass/main';
+
+@mixin level($property) {
+  .contact__level {
+    padding-bottom: $property;
+  }
+}
+
+.contact__container {
+  @include container-contents();
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  border: 7px solid $quad-color;
+  width: 80%;
+
+  .contact__labels {
+    flex-direction: column;
+    text-align: end;
+    @include level(5%);
+  }
+  .contact__links {
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5%;
+    cursor: pointer;
+    @include level(1%);
+  }
+}

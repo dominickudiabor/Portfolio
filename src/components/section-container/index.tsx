@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './styles.scss';
 
 interface SectionContainerProps {
-  id: string
-  classname1: string
-  classname2: string
-  classname3: string
-  header: string
-  children: React.ReactNode
+  id: string;
+  header: string;
+  children?: React.ReactNode;
 }
-const SectionContainer = ({ id, classname1, classname2, classname3, header, children }: SectionContainerProps) => (
-  <section id={id} className={classname1}>
-    <h2 className={classname2}>{header}</h2>
-    <hr className={classname3} />
+const SectionContainer = ({ id, header, children }: SectionContainerProps) => (
+  <div id={id} className="section">
+    <p className="section__header">{header}</p>
+    <hr className="section__line" />
     {children}
-  </section>
-)
+  </div>
+);
 
-export default SectionContainer
+export default SectionContainer;

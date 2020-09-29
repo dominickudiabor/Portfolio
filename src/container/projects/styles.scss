@@ -1,0 +1,8 @@
+@import '../../sass/main';
+
+.projects__container {
+  @include container-contents();
+  display: flex;
+  width: 90%;
+  overflow: scroll;
+}

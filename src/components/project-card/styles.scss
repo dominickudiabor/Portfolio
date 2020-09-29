@@ -1,45 +1,45 @@
-@import "../../sass/main";
+@import '../../sass/main';
 
 .project-card {
   display: flex;
-  justify-content: space-evenly;
-  margin: 5% 0;
-  padding: 2% 0;
-  background-color: $primary-color;
+  flex-direction: column;
+  padding: 2% 5%;
 
   .project-card__image {
-    width: 30vw;
-    height: 100%;
-
-    @media screen and(max-width: 900px) {
-      margin-top: 15%;
-    }
+    width: 25rem;
+    height: 18rem;
   }
   .project-card__contents {
-    flex-direction: column;
-    text-align: center;
-    width: 30vw;
-  }
-  .project-card__header {
+    background-color: $primary-color;
     color: $secondary-color;
-    font-size: 2rem;
-    &:focus {
-      outline: none;
+    padding: 0 2%;
+    height: 11rem;
+    :first-child {
+      font-weight: 600;
     }
-    @include web-content();
+    .project-card__stack {
+      height: 50px;
+    }
   }
-  .project-card__sub-header {
-    color: $secondary-color;
-    font-size: 1.5rem;
-  }
-  .project-card__description {
-    justify-content: left !important;
-    line-height: 2.5;
-    font-size: 1.2rem;
+  .project-card__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9%;
+    padding-bottom: 5%;
 
-    &:focus {
-      outline: none;
+    .project-card__button {
+      background-color: $quad-color;
+      padding: 5% 12%;
+      cursor: pointer;
     }
-    @include web-content();
+  }
+  .project-card__private {
+    margin: 0 auto;
+    margin-top: -7%;
+    background-color: $tertiary-color;
+    color: $primary-color;
+    padding: 5%;
+    width: 50%;
+    border-radius: 3%;
   }
 }

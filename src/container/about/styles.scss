@@ -1,0 +1,24 @@
+@import '../../sass/main';
+
+.about__container {
+  @include container-contents();
+  display: flex;
+  justify-content: space-around;
+
+  .about__image {
+    width: 50%;
+    padding: 5%;
+    width: 20rem;
+    height: 20rem;
+    opacity: 1;
+    border-radius: 15%;
+  }
+
+  .about__description {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    width: 50%;
+    padding: 2% 8%;
+    text-align: left;
+  }
+}

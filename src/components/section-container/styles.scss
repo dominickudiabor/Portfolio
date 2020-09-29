@@ -1,0 +1,13 @@
+@import '../../sass/main';
+
+.section {
+  @include section-padding();
+  @include section-background();
+
+  .section__header {
+    @include section-sub-header();
+  }
+  .section__line {
+    @include hr-line();
+  }
+}

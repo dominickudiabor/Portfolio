@@ -1,7 +1,17 @@
-@mixin section-sub-header($property) {
-  font-size: 2.7rem;
-  font-weight: bolder;
-  color: $property;
+@mixin section-padding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2%;
+  width: 70%;
+  height: fit-content;
+  margin: auto;
+  margin-top: 2.7rem;
+}
+
+@mixin section-sub-header {
+  font-size: 2.2rem;
+  color: $primary-color;
   text-align: center;
   @media screen and(max-width: 900px) {
     font-size: 1rem;
@@ -9,17 +19,19 @@
   }
 }
 
-@mixin hr-line($property) {
+@mixin hr-line {
   width: 5%;
-  border: solid 2px $property;
+  margin-top: -1.5rem;
+  border: solid 1px $primary-color;
   @media screen and(max-width: 900px) {
-    border: solid 0.5px $property;
+    border: solid 0.5px $primary-color;
   }
 }
 
-@mixin section-padding {
-  padding: 3% 7%;
+@mixin container-contents {
+  width: 100%;
   height: auto;
+  text-align: center;
 }
 
 @mixin hover-transition {
@@ -35,7 +47,7 @@
 @mixin navigation-items {
   text-decoration: none !important;
   margin-right: 1.2em;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 @mixin footer-text {
@@ -93,68 +105,21 @@
   margin-bottom: 5%;
 }
 
-@mixin arrow-animate {
-  width: 3em;
-  height: 3em;
-  position: relative;
-  left: 50%;
-  margin-left: -0.5em;
-  top: 7.5rem;
-  @media screen and(max-width: 900px) {
-    margin-left: -1.5em;
-    top: 5.5rem;
-  }
-
-  @keyframes arrow {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @-webkit-keyframes arrow /*Safari and Chrome*/ {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  path {
-    stroke: $primary-color;
-    fill: transparent;
-    stroke-width: 1.5px;
-    animation: arrow 2s infinite;
-    -webkit-animation: arrow 2s infinite;
-
-    &.a1 {
-      animation-delay: -1s;
-      -webkit-animation-delay: -1s; /* Safari 和 Chrome */
-    }
-
-    &.a2 {
-      animation-delay: -0.5s;
-      -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
-    }
-
-    &.a3 {
-      animation-delay: 0s;
-      -webkit-animation-delay: 0s; /* Safari 和 Chrome */
-    }
-  }
+@mixin section-background {
+  background-image: linear-gradient(
+    to right bottom,
+    #21038c,
+    #200389,
+    #1e0486,
+    #1d0484,
+    #1c0481,
+    #1a047c,
+    #170577,
+    #150572,
+    #110569,
+    #0e0561,
+    #0a0558,
+    #080450
+  );
+  opacity: 1;
 }
